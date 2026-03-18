@@ -1,4 +1,4 @@
-![Header](./GitHub Profile Header.svg)
+![Header](./header.svg)
 
 <!--
 **Koji1999/Koji1999** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
