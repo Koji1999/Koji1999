@@ -1,0 +1,265 @@
+<svg width="100%" viewBox="0 0 680 370" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="skyC"><rect x="0" y="0" width="680" height="222"/></clipPath>
+    <style>
+      @keyframes weatherCycle{0%,18%{opacity:1}28%{opacity:0}72%{opacity:0}82%{opacity:1}100%{opacity:1}}
+      @keyframes cloudCover{0%,22%{opacity:0}35%{opacity:1}65%{opacity:1}78%{opacity:0}100%{opacity:0}}
+      @keyframes rainShow{0%,33%{opacity:0}43%{opacity:1}60%{opacity:1}70%{opacity:0}100%{opacity:0}}
+      @keyframes drift1{0%,100%{transform:translateX(0)}50%{transform:translateX(22px)}}
+      @keyframes drift2{0%,100%{transform:translateX(0)}50%{transform:translateX(-16px)}}
+      @keyframes sunpulse{0%,100%{opacity:1}50%{opacity:.86}}
+      @keyframes raindrop{0%{transform:translateY(0);opacity:.8}100%{transform:translateY(30px);opacity:0}}
+      @keyframes sway{0%,100%{transform-origin:88px 218px;transform:rotate(-1deg)}50%{transform-origin:88px 218px;transform:rotate(1deg)}}
+      @keyframes bare{0%{opacity:1}4%{opacity:0}92%{opacity:0}96%{opacity:1}100%{opacity:1}}
+      @keyframes foliage{0%{opacity:0}6%{opacity:1}88%{opacity:1}94%{opacity:0}100%{opacity:0}}
+      @keyframes blossom{0%,22%{opacity:0}30%{opacity:1}48%{opacity:1}56%{opacity:0}100%{opacity:0}}
+      @keyframes fruit{0%,52%{opacity:0}60%{opacity:1}88%{opacity:1}94%{opacity:0}100%{opacity:0}}
+      @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+      .DUR{animation-duration:36s;animation-iteration-count:infinite;animation-timing-function:ease-in-out}
+      .cloud1{animation:drift1 11s ease-in-out infinite}
+      .cloud2{animation:drift2 15s ease-in-out infinite}
+      .sun-g{animation:weatherCycle 36s ease-in-out infinite,sunpulse 4s ease-in-out infinite}
+      .covercloud{animation:cloudCover 36s ease-in-out infinite}
+      .raingroup{animation:rainShow 36s ease-in-out infinite}
+      .r1{animation:raindrop 1.3s linear infinite 0s}
+      .r2{animation:raindrop 1.3s linear infinite .18s}
+      .r3{animation:raindrop 1.3s linear infinite .36s}
+      .r4{animation:raindrop 1.3s linear infinite .54s}
+      .r5{animation:raindrop 1.3s linear infinite .72s}
+      .r6{animation:raindrop 1.3s linear infinite .9s}
+      .r7{animation:raindrop 1.3s linear infinite .12s}
+      .r8{animation:raindrop 1.3s linear infinite .45s}
+      .r9{animation:raindrop 1.3s linear infinite .63s}
+      .sway{animation:sway 6s ease-in-out infinite}
+      .bare-layer{animation:bare 36s ease-in-out infinite}
+      .foliage-layer{animation:foliage 36s ease-in-out infinite}
+      .blossom-layer{animation:blossom 36s ease-in-out infinite}
+      .fruit-layer{animation:fruit 36s ease-in-out infinite}
+    </style>
+  </defs>
+
+  <!-- Sky -->
+  <rect class="DUR" x="0" y="0" width="680" height="222" fill="#B8D9F0"/>
+  <rect class="covercloud DUR" x="0" y="0" width="680" height="222" fill="#6A9AB8" opacity="0"/>
+
+  <!-- Sun -->
+  <g class="sun-g">
+    <circle cx="560" cy="55" r="26" fill="#F5D060"/>
+    <line x1="560" y1="22" x2="560" y2="15" stroke="#F5D060" stroke-width="2" stroke-linecap="round"/>
+    <line x1="560" y1="88" x2="560" y2="95" stroke="#F5D060" stroke-width="2" stroke-linecap="round"/>
+    <line x1="527" y1="55" x2="520" y2="55" stroke="#F5D060" stroke-width="2" stroke-linecap="round"/>
+    <line x1="593" y1="55" x2="600" y2="55" stroke="#F5D060" stroke-width="2" stroke-linecap="round"/>
+    <line x1="537" y1="32" x2="532" y2="27" stroke="#F5D060" stroke-width="2" stroke-linecap="round"/>
+    <line x1="583" y1="78" x2="588" y2="83" stroke="#F5D060" stroke-width="2" stroke-linecap="round"/>
+    <line x1="583" y1="32" x2="588" y2="27" stroke="#F5D060" stroke-width="2" stroke-linecap="round"/>
+    <line x1="537" y1="78" x2="532" y2="83" stroke="#F5D060" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Clouds -->
+  <g class="cloud1" clip-path="url(#skyC)">
+    <ellipse cx="380" cy="68" rx="58" ry="20" fill="#F0F7FC" opacity=".88"/>
+    <ellipse cx="350" cy="76" rx="38" ry="16" fill="#F0F7FC" opacity=".88"/>
+    <ellipse cx="410" cy="76" rx="42" ry="17" fill="#F0F7FC" opacity=".88"/>
+  </g>
+  <g class="cloud2" clip-path="url(#skyC)">
+    <ellipse cx="510" cy="90" rx="40" ry="14" fill="#E8F2F8" opacity=".75"/>
+    <ellipse cx="488" cy="97" rx="26" ry="11" fill="#E8F2F8" opacity=".75"/>
+    <ellipse cx="532" cy="97" rx="30" ry="12" fill="#E8F2F8" opacity=".75"/>
+  </g>
+
+  <!-- Storm clouds -->
+  <g class="covercloud DUR" clip-path="url(#skyC)" opacity="0">
+    <ellipse cx="340" cy="52" rx="130" ry="38" fill="#7A9AB8" opacity=".75"/>
+    <ellipse cx="200" cy="66" rx="95" ry="30" fill="#7A9AB8" opacity=".68"/>
+    <ellipse cx="490" cy="60" rx="110" ry="33" fill="#7A9AB8" opacity=".68"/>
+    <ellipse cx="620" cy="72" rx="70" ry="22" fill="#8AAEC4" opacity=".6"/>
+  </g>
+
+  <!-- Rain -->
+  <g class="raingroup DUR" clip-path="url(#skyC)" opacity="0">
+    <line class="r1" x1="120" y1="96" x2="115" y2="122" stroke="#7AAEC8" stroke-width="1.2" stroke-linecap="round"/>
+    <line class="r2" x1="180" y1="90" x2="175" y2="116" stroke="#7AAEC8" stroke-width="1.2" stroke-linecap="round"/>
+    <line class="r3" x1="240" y1="88" x2="235" y2="114" stroke="#7AAEC8" stroke-width="1.2" stroke-linecap="round"/>
+    <line class="r4" x1="300" y1="85" x2="295" y2="111" stroke="#7AAEC8" stroke-width="1.2" stroke-linecap="round"/>
+    <line class="r5" x1="360" y1="82" x2="355" y2="108" stroke="#7AAEC8" stroke-width="1.2" stroke-linecap="round"/>
+    <line class="r6" x1="420" y1="84" x2="415" y2="110" stroke="#7AAEC8" stroke-width="1.2" stroke-linecap="round"/>
+    <line class="r7" x1="480" y1="87" x2="475" y2="113" stroke="#7AAEC8" stroke-width="1.2" stroke-linecap="round"/>
+    <line class="r8" x1="540" y1="90" x2="535" y2="116" stroke="#7AAEC8" stroke-width="1.2" stroke-linecap="round"/>
+    <line class="r9" x1="600" y1="92" x2="595" y2="118" stroke="#7AAEC8" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Greeting -->
+  <text x="460" y="175" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#1A3A4A" opacity=".82">Hi, I'm Koji</text>
+
+  <!-- Soil strip -->
+  <rect x="0" y="218" width="680" height="8" fill="#6B3E1E"/>
+  <rect x="0" y="226" width="680" height="4" fill="#8B5230"/>
+
+  <!-- Underground -->
+  <rect x="0" y="230" width="680" height="140" fill="white" opacity="0"/>
+
+  <!-- Roots -->
+  <path d="M88 228 Q106 244 126 256 Q150 270 174 278 Q200 286 222 284" fill="none" stroke="#4A2C0E" stroke-width="3" stroke-linecap="round"/>
+  <path d="M88 228 Q100 250 116 266 Q136 284 160 294 Q186 304 210 302 Q234 300 252 292" fill="none" stroke="#5A3418" stroke-width="2" stroke-linecap="round"/>
+  <path d="M126 256 Q140 262 158 264 Q174 266 188 260" fill="none" stroke="#A87850" stroke-width="1.1" stroke-linecap="round"/>
+  <path d="M174 278 Q190 282 206 284 Q222 284 234 278" fill="none" stroke="#C4956A" stroke-width="0.9" stroke-linecap="round"/>
+  <path d="M88 228 Q70 244 50 256 Q30 268 10 274 Q-4 278 -14 276" fill="none" stroke="#4A2C0E" stroke-width="2.8" stroke-linecap="round"/>
+  <path d="M88 228 Q76 250 60 266 Q42 282 22 290 Q6 296 -8 294" fill="none" stroke="#5A3418" stroke-width="2" stroke-linecap="round"/>
+  <path d="M50 256 Q34 262 16 264 Q2 266 -10 262" fill="none" stroke="#A87850" stroke-width="1.1" stroke-linecap="round"/>
+  <path d="M10 274 Q-4 280 -14 284" fill="none" stroke="#C4956A" stroke-width="0.9" stroke-linecap="round"/>
+  <path d="M88 228 Q58 234 30 238 Q8 240 -10 238" fill="none" stroke="#7A5230" stroke-width="1.3" stroke-linecap="round"/>
+  <path d="M88 228 Q118 232 148 236 Q172 238 194 234" fill="none" stroke="#7A5230" stroke-width="1.3" stroke-linecap="round"/>
+  <path d="M88 228 Q84 252 82 276 Q80 298 84 318" fill="none" stroke="#4A2C0E" stroke-width="2" stroke-linecap="round"/>
+  <path d="M84 318 Q86 330 90 342" fill="none" stroke="#7A5230" stroke-width="1.2" stroke-linecap="round"/>
+
+  <!-- Underground text -->
+  <text x="460" y="273" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#6B3E1E" opacity=".65">Le Wagon Tokyo · Sophia University</text>
+  <text x="460" y="291" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#6B3E1E" opacity=".65">EN · JA · FR · ES · CA</text>
+  <text x="460" y="309" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#6B3E1E" opacity=".65">Tokyo, Japan</text>
+
+  <!-- Tree -->
+  <g class="sway" clip-path="url(#skyC)">
+    <path d="M88 222 Q85 192 83 160 Q81 128 85 96 Q88 68 90 40" fill="none" stroke="#5C3318" stroke-width="14" stroke-linecap="round"/>
+    <path d="M88 222 Q84 192 82 160 Q80 128 84 96 Q87 68 89 40" fill="none" stroke="#7A4A28" stroke-width="7" stroke-linecap="round" opacity=".45"/>
+    <path d="M88 148 Q68 126 44 110 Q22 94 -4 86" fill="none" stroke="#5C3318" stroke-width="6" stroke-linecap="round"/>
+    <path d="M88 116 Q110 92 134 76 Q158 60 184 50" fill="none" stroke="#5C3318" stroke-width="5.5" stroke-linecap="round"/>
+    <path d="M88 84 Q66 64 42 50 Q20 36 -4 28" fill="none" stroke="#5C3318" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M88 100 Q114 84 140 72 Q168 60 196 54" fill="none" stroke="#5C3318" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M89 56 Q98 38 106 22 Q114 8 120 -4" fill="none" stroke="#5C3318" stroke-width="4" stroke-linecap="round"/>
+    <path d="M44 110 Q28 102 10 98 Q-4 94 -14 96" fill="none" stroke="#6B3E1E" stroke-width="3" stroke-linecap="round"/>
+    <path d="M44 110 Q36 124 24 134 Q12 142 -2 146" fill="none" stroke="#6B3E1E" stroke-width="2.8" stroke-linecap="round"/>
+    <path d="M134 76 Q148 60 164 52 Q180 44 200 40" fill="none" stroke="#6B3E1E" stroke-width="3" stroke-linecap="round"/>
+    <path d="M134 76 Q140 92 142 108 Q142 122 136 132" fill="none" stroke="#6B3E1E" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M184 50 Q198 40 214 32 Q230 24 248 20" fill="none" stroke="#6B3E1E" stroke-width="2.8" stroke-linecap="round"/>
+    <path d="M106 22 Q96 10 84 0 Q72 -8 58 -12" fill="none" stroke="#6B3E1E" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M106 22 Q120 14 138 8 Q154 2 172 0" fill="none" stroke="#6B3E1E" stroke-width="2.5" stroke-linecap="round"/>
+
+    <g class="bare-layer DUR">
+      <circle cx="-14" cy="96" r="3" fill="#7A4A28"/>
+      <circle cx="-2" cy="146" r="3" fill="#7A4A28"/>
+      <circle cx="248" cy="20" r="3" fill="#7A4A28"/>
+      <circle cx="172" cy="0" r="3" fill="#7A4A28"/>
+      <circle cx="58" cy="-12" r="3" fill="#7A4A28"/>
+    </g>
+
+    <g class="foliage-layer DUR" opacity="0">
+      <circle cx="-14" cy="94" r="24" fill="#2E6B28" opacity=".88"/>
+      <circle cx="8" cy="82" r="20" fill="#4A8C3F" opacity=".85"/>
+      <circle cx="22" cy="98" r="17" fill="#3D7A34" opacity=".82"/>
+      <circle cx="-2" cy="144" r="22" fill="#2E6B28" opacity=".88"/>
+      <circle cx="18" cy="130" r="17" fill="#4A8C3F" opacity=".82"/>
+      <circle cx="-4" cy="28" r="20" fill="#3D7A34" opacity=".85"/>
+      <circle cx="10" cy="16" r="17" fill="#4A8C3F" opacity=".82"/>
+      <circle cx="-14" cy="44" r="18" fill="#2E6B28" opacity=".85"/>
+      <circle cx="20" cy="40" r="16" fill="#3D7A34" opacity=".8"/>
+      <circle cx="58" cy="-12" r="22" fill="#3D7A34" opacity=".85"/>
+      <circle cx="40" cy="-2" r="17" fill="#4A8C3F" opacity=".8"/>
+      <circle cx="76" cy="-18" r="14" fill="#2E6B28" opacity=".78"/>
+      <circle cx="42" cy="14" r="16" fill="#4A8C3F" opacity=".8"/>
+      <circle cx="248" cy="20" r="26" fill="#3D7A34" opacity=".88"/>
+      <circle cx="230" cy="28" r="20" fill="#4A8C3F" opacity=".85"/>
+      <circle cx="264" cy="10" r="17" fill="#2E6B28" opacity=".8"/>
+      <circle cx="172" cy="0" r="24" fill="#3D7A34" opacity=".88"/>
+      <circle cx="154" cy="10" r="19" fill="#4A8C3F" opacity=".85"/>
+      <circle cx="188" cy="-6" r="15" fill="#2E6B28" opacity=".8"/>
+      <circle cx="136" cy="132" r="20" fill="#4A8C3F" opacity=".82"/>
+      <circle cx="200" cy="42" r="22" fill="#3D7A34" opacity=".85"/>
+      <circle cx="104" cy="60" r="24" fill="#4A8C3F" opacity=".8"/>
+      <circle cx="146" cy="50" r="22" fill="#2E6B28" opacity=".82"/>
+      <circle cx="70" cy="108" r="20" fill="#3D7A34" opacity=".78"/>
+      <circle cx="10" cy="84" r="14" fill="#4A8C3F" opacity=".78"/>
+      <circle cx="80" cy="14" r="18" fill="#2E6B28" opacity=".82"/>
+      <circle cx="118" cy="6" r="17" fill="#4A8C3F" opacity=".8"/>
+      <circle cx="140" cy="20" r="16" fill="#3D7A34" opacity=".8"/>
+      <circle cx="62" cy="52" r="18" fill="#3D7A34" opacity=".84"/>
+      <circle cx="48" cy="64" r="16" fill="#2E6B28" opacity=".82"/>
+      <circle cx="72" cy="38" r="15" fill="#4A8C3F" opacity=".8"/>
+    </g>
+
+    <g class="blossom-layer DUR" opacity="0">
+      <circle cx="-14" cy="94" r="24" fill="#2E6B28" opacity=".7"/>
+      <circle cx="-2" cy="144" r="22" fill="#2E6B28" opacity=".7"/>
+      <circle cx="104" cy="60" r="24" fill="#4A8C3F" opacity=".7"/>
+      <circle cx="146" cy="50" r="22" fill="#2E6B28" opacity=".7"/>
+      <circle cx="-4" cy="28" r="20" fill="#3D7A34" opacity=".65"/>
+      <circle cx="-14" cy="44" r="18" fill="#2E6B28" opacity=".65"/>
+      <circle cx="62" cy="52" r="18" fill="#3D7A34" opacity=".65"/>
+      <circle cx="-14" cy="92" r="22" fill="#F2B8CC" opacity=".88"/>
+      <circle cx="8" cy="80" r="17" fill="#F8D0DE" opacity=".82"/>
+      <circle cx="24" cy="96" r="14" fill="#EDA0B8" opacity=".78"/>
+      <circle cx="-2" cy="142" r="20" fill="#F8D0DE" opacity=".85"/>
+      <circle cx="18" cy="128" r="15" fill="#F2B8CC" opacity=".8"/>
+      <circle cx="-4" cy="26" r="18" fill="#F2B8CC" opacity=".82"/>
+      <circle cx="12" cy="14" r="15" fill="#F8D0DE" opacity=".78"/>
+      <circle cx="-12" cy="42" r="16" fill="#EDA0B8" opacity=".75"/>
+      <circle cx="44" cy="12" r="14" fill="#F2B8CC" opacity=".78"/>
+      <circle cx="64" cy="50" r="16" fill="#F8D0DE" opacity=".8"/>
+      <circle cx="50" cy="62" r="14" fill="#F2B8CC" opacity=".78"/>
+      <circle cx="74" cy="36" r="13" fill="#EDA0B8" opacity=".76"/>
+      <circle cx="248" cy="18" r="24" fill="#F2B8CC" opacity=".88"/>
+      <circle cx="228" cy="26" r="19" fill="#F8D0DE" opacity=".82"/>
+      <circle cx="266" cy="8" r="15" fill="#EDA0B8" opacity=".78"/>
+      <circle cx="172" cy="-2" r="22" fill="#F2B8CC" opacity=".88"/>
+      <circle cx="152" cy="8" r="18" fill="#F8D0DE" opacity=".82"/>
+      <circle cx="190" cy="-8" r="14" fill="#EDA0B8" opacity=".78"/>
+      <circle cx="58" cy="-14" r="20" fill="#F2B8CC" opacity=".85"/>
+      <circle cx="38" cy="-4" r="15" fill="#F8D0DE" opacity=".8"/>
+      <circle cx="76" cy="-20" r="13" fill="#EDA0B8" opacity=".75"/>
+      <circle cx="136" cy="130" r="18" fill="#F2B8CC" opacity=".8"/>
+      <circle cx="200" cy="40" r="20" fill="#F8D0DE" opacity=".82"/>
+      <circle cx="104" cy="58" r="20" fill="#F2B8CC" opacity=".78"/>
+      <circle cx="146" cy="48" r="18" fill="#F8D0DE" opacity=".78"/>
+      <circle cx="82" cy="12" r="16" fill="#F2B8CC" opacity=".78"/>
+      <circle cx="120" cy="4" r="15" fill="#F8D0DE" opacity=".76"/>
+    </g>
+
+    <g class="fruit-layer DUR" opacity="0">
+      <circle cx="-14" cy="94" r="24" fill="#2E6B28" opacity=".85"/>
+      <circle cx="-2" cy="144" r="22" fill="#2E6B28" opacity=".85"/>
+      <circle cx="248" cy="20" r="26" fill="#3D7A34" opacity=".85"/>
+      <circle cx="172" cy="0" r="24" fill="#3D7A34" opacity=".85"/>
+      <circle cx="58" cy="-12" r="22" fill="#3D7A34" opacity=".82"/>
+      <circle cx="104" cy="60" r="24" fill="#4A8C3F" opacity=".78"/>
+      <circle cx="146" cy="50" r="22" fill="#2E6B28" opacity=".8"/>
+      <circle cx="136" cy="132" r="20" fill="#4A8C3F" opacity=".82"/>
+      <circle cx="200" cy="42" r="22" fill="#3D7A34" opacity=".85"/>
+      <circle cx="-4" cy="28" r="20" fill="#3D7A34" opacity=".8"/>
+      <circle cx="-14" cy="44" r="18" fill="#2E6B28" opacity=".8"/>
+      <circle cx="80" cy="14" r="18" fill="#2E6B28" opacity=".78"/>
+      <circle cx="118" cy="6" r="17" fill="#4A8C3F" opacity=".78"/>
+      <circle cx="62" cy="52" r="18" fill="#3D7A34" opacity=".82"/>
+      <ellipse cx="-8" cy="106" rx="7" ry="8" fill="#5B2D8E"/>
+      <ellipse cx="6" cy="100" rx="6" ry="7" fill="#7A3DAC"/>
+      <ellipse cx="-4" cy="152" rx="7" ry="8" fill="#5B2D8E"/>
+      <ellipse cx="10" cy="142" rx="6" ry="7" fill="#7A3DAC"/>
+      <ellipse cx="-6" cy="38" rx="6" ry="7" fill="#5B2D8E"/>
+      <ellipse cx="8" cy="22" rx="6" ry="7" fill="#7A3DAC"/>
+      <ellipse cx="34" cy="56" rx="6" ry="7" fill="#5B2D8E"/>
+      <ellipse cx="48" cy="20" rx="6" ry="7" fill="#7A3DAC"/>
+      <ellipse cx="66" cy="60" rx="6" ry="7" fill="#5B2D8E"/>
+      <ellipse cx="54" cy="72" rx="6" ry="7" fill="#7A3DAC"/>
+      <ellipse cx="108" cy="70" rx="7" ry="8" fill="#5B2D8E"/>
+      <ellipse cx="92" cy="78" rx="6" ry="7" fill="#7A3DAC"/>
+      <ellipse cx="148" cy="60" rx="7" ry="8" fill="#5B2D8E"/>
+      <ellipse cx="138" cy="140" rx="6" ry="7" fill="#7A3DAC"/>
+      <ellipse cx="122" cy="14" rx="6" ry="7" fill="#5B2D8E"/>
+      <ellipse cx="84" cy="24" rx="6" ry="7" fill="#7A3DAC"/>
+      <ellipse cx="200" cy="54" rx="7" ry="8" fill="#5B2D8E"/>
+      <ellipse cx="214" cy="46" rx="6" ry="7" fill="#7A3DAC"/>
+      <ellipse cx="188" cy="60" rx="6" ry="7" fill="#5B2D8E"/>
+      <ellipse cx="248" cy="28" rx="7" ry="8" fill="#7A3DAC"/>
+      <ellipse cx="164" cy="12" rx="6" ry="7" fill="#5B2D8E"/>
+      <ellipse cx="174" cy="-4" rx="6" ry="7" fill="#7A3DAC"/>
+      <ellipse cx="60" cy="-4" rx="6" ry="7" fill="#5B2D8E"/>
+      <ellipse cx="-7" cy="103" rx="2" ry="2.5" fill="#9B6DC4" opacity=".6"/>
+      <ellipse cx="109" cy="67" rx="2" ry="2.5" fill="#9B6DC4" opacity=".6"/>
+      <ellipse cx="201" cy="51" rx="2" ry="2.5" fill="#9B6DC4" opacity=".6"/>
+      <ellipse cx="249" cy="25" rx="2" ry="2.5" fill="#9B6DC4" opacity=".6"/>
+      <ellipse cx="165" cy="9" rx="2" ry="2.5" fill="#9B6DC4" opacity=".6"/>
+      <ellipse cx="9" cy="19" rx="2" ry="2.5" fill="#9B6DC4" opacity=".6"/>
+      <ellipse cx="123" cy="11" rx="2" ry="2.5" fill="#9B6DC4" opacity=".6"/>
+      <ellipse cx="67" cy="57" rx="2" ry="2.5" fill="#9B6DC4" opacity=".6"/>
+    </g>
+  </g>
+
+</svg>
